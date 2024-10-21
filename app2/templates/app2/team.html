@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - E-commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+            position: fixed;
+            width: 250px;
+            padding: 20px;
+        }
+        .sidebar a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            border-radius: 5px;
+            padding: 10px 15px;
+            display: block;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .team-member {
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 class="text-white">My E-commerce App</h3>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'app2:gallery' %}">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'app2:services' %}">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'app2:team' %}">Team</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'app1:home' %}">Go to App1 </a>
+        </li>
+    </ul>
+</div>
+
+<div class="content">
+    <h1>Meet Our Team</h1>
+    <div class="team-member">
+        <h3>Jane Doe</h3>
+        <img src="{% static 'images/jane.jpg' %}" alt="Jane Doe" class="img-fluid">
+        <p>Jane is our lead designer with over 10 years of experience in the fashion industry.</p>
+    </div>
+    <div class="team-member">
+        <h3>John Smith</h3>
+        <img src="{% static 'images/john.jpg' %}" alt="John Smith" class="img-fluid">
+        <p>John is our marketing specialist who helps us reach our customers effectively.</p>
+    </div>
+    <!-- Add more team members as needed -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
